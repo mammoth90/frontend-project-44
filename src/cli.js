@@ -1,3 +1,5 @@
 import readLineSync from 'readline-sync'
 
-export default (question) => readLineSync.question(question)
+const getName = (question) => readLineSync.question(question)
+
+export default getName
