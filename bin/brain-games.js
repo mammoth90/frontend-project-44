@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-import getName from '../src/cli.js'
-
-const separator = ' '; // or ': ' or '- ' and etc...
+import { getValue as getName } from '../src/cli.js'
 
 console.log('Welcome to the Brain Games!');
-const question = 'May I ask your name?';
-const name = getName(question + separator);
-console.log(`Hello, ${name}!`);
+const question = 'May I ask your name? ';
+export const userName = getName(question);
+console.log(`Hello, ${userName}!`);
