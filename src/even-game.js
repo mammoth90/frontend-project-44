@@ -1,5 +1,5 @@
 import { getInt, isEven} from "./maths.js";
-import { getValue as getAnswer, yesNoCase } from "./cli.js";
+import { getValue as getAnswer } from "./cli.js";
 import { userName } from "../bin/brain-games.js";
 
 
@@ -12,12 +12,12 @@ const process = (step = 1) => {
 const question = getInt()
 console.log(`Question: ${question}`);
 const answer = getAnswer('Your answer: ').toLowerCase();
-if (isEven(question) === yesNoCase(answer)) {
+if (isEven(question) === answer) {
     console.log('Correct!')
     step++;
      return process(step);
 }
-else console.log(`'${answer}' is wrong answer ;(. Correct answer was '${yesNoCase(isEven(question))}'.`);
+else console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(question)}'.`);
 
 }
 process();
