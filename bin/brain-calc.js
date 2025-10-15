@@ -2,6 +2,6 @@
 
 import "./brain-games.js"
 
-import "../src/games/even-game.js"
+import "../src/games/calc-game.js"
 
 

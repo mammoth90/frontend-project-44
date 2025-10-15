@@ -1,6 +1,6 @@
-import { getInt, isEven} from "./maths.js";
-import { getValue as getAnswer } from "./cli.js";
-import { userName } from "../bin/brain-games.js";
+import { getInt, isEven} from "../maths.js";
+import { getValue as getAnswer } from "../cli.js";
+import { userName } from '../../bin/brain-games.js';
 
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -17,7 +17,10 @@ if (isEven(question) === answer) {
     step++;
      return process(step);
 }
-else console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(question)}'.`);
+else {
+   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(question)}'.`);
+   console.log(`Let's try again, ${userName}!`)
+}
 
 }
 process();
