@@ -10,7 +10,7 @@ const process = (step = 1) => {
    if (step === 4) { return console.log(`Congratulations, ${userName}!`); } 
 
 const question = getExpr();
-const rightUnswer = eval(question);
+const rightUnswer = eval(question); //NOSONAR:  safe no user access
 console.log(`Question: ${question}`);
 const answer = Number(getAnswer('Your answer: '));
 
