@@ -1,3 +1,3 @@
 import { gameInit  } from "./core.js";
 
-gameInit('brain-even');
+gameInit('brain-gcd');
