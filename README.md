@@ -3,4 +3,4 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mammoth90_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mammoth90_frontend-project-44)
 
-[![asciicast](https://asciinema.org/a/YLeaXB8mmUqZrDp0RyGz2NGUG.svg)](https://asciinema.org/a/YLeaXB8mmUqZrDp0RyGz2NGUG)
+[![asciicast](https://asciinema.org/a/m05c7v8cE9lv10jXgYKbQ62nd.svg)](https://asciinema.org/a/m05c7v8cE9lv10jXgYKbQ62nd)

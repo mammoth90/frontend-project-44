@@ -2,7 +2,7 @@
 const expressions = ['+', '-', '*'];
 
 
-export const getInt = (max = 100) => Math.floor(Math.random() * max) + 1; // NOSONAR:  safe non-cryptographic random
+export const getInt = (max = 100, min = 1) => Math.floor(Math.random() * (max - min +1 )) + min; // NOSONAR:  safe non-cryptographic random
 
 
 
@@ -33,4 +33,27 @@ export const getNod = () => {
     return {question, answer}
    
 }
+
+export const getProgression = () => {
+       
+    const progressionLength = getInt(10, 5);
+    const progression = new Array(progressionLength).fill(0);
+    const factor = getInt(10);
+    const emptySpot = getInt(progressionLength) - 1;
+    const start = getInt(10);
+    
+
+    for (let i = 0; i < progressionLength; i = i + 1) {
+             if (i === 0) {
+            progression[i] = start;
+                }
+                else progression[i] = progression[i - 1] + factor;  
+    }
+    
+    const answer = String(progression[emptySpot]);
+    progression[emptySpot] = '...';
+    const question = progression.join(' ');
+
+    return { question, answer }
+ }
     
