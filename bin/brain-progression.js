@@ -1,7 +1,6 @@
 #!/usr/bin/env node
+const gameType = 'brain-progression';
+const { gameInit } =  await import( "../src/games/game-select.js");
 
-
-import "./brain-games.js"
-
-import "../src/games/progression-game.js"
+gameInit(gameType);
 

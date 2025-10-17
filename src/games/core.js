@@ -1,34 +1,15 @@
-import  * as maths from "../maths.js";
+
 import { getValue as getAnswer } from "../cli.js";
 import { userName } from '../../bin/brain-games.js';
-const rounds = 3;
-const evenGameGreeting  = 'Answer "yes" if the number is even, otherwise answer "no".';
-const calcGameGreeting = 'What is the result of the expression?';
-const gcdGameGreeting = 'Find the greatest common divisor of given numbers.';
-const progressionGameGreeting = 'What number is missing in the progression?';
-
-const gameCatalog = {
-        'brain-even': [evenGameGreeting, maths.isEven],
-        'brain-calc': [calcGameGreeting, maths.getExpr],
-        'brain-gcd': [gcdGameGreeting, maths.getNod],
-        'brain-progression': [progressionGameGreeting, maths.getProgression]
-}
-
-
-export const gameInit = (gameTitle) => {
-
-    const gameSettings  = gameCatalog[gameTitle];
-    const [greeting, fn] = gameSettings;
-    console.log(greeting);
-    return process(fn, rounds);
-}
 
 
 
-const process = (questionGenerate, lastStep) => {
+export const process = (questionGenerate, lastStep) => {
 
 const iter = (step) => {
-if (step === lastStep) { return console.log(`Congratulations, ${userName}!`); } 
+if (step === lastStep) { 
+   return console.log(`Congratulations, ${userName}!`); 
+} 
 
 
 const {question, answer} = questionGenerate();
@@ -41,7 +22,7 @@ if (userAnswer === answer) {
 }
 else {
    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
-   console.log(`Let's try again, ${userName}!`)
+   return console.log(`Let's try again, ${userName}!`)
 }
 
 }

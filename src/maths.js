@@ -20,8 +20,8 @@ export const getExpr = () => {
 
 export const getNod = () => {
     const base = getInt(20);
-    const mult1 = getInt(10);
-    const mult2 = getInt(10);
+    const mult1 = getInt(5);
+    const mult2 = getInt(5);
     const int1 = mult1 * base;
     const int2 = mult2 * base;
     const iter = (a, b) => {
@@ -56,4 +56,24 @@ export const getProgression = () => {
 
     return { question, answer }
  }
+
+ export const getPrime = () => {
+    const number = getInt(100, 1);
+    const deviders = Math.floor(Math.sqrt(number));
+    const answer = hasDeviders(deviders, number) ? 'no' : 'yes';
+    const question = String(number);
     
+    return { question, answer }
+ }
+
+ const hasDeviders = (deviders, number) => {
+      for (let i = 2; i <= deviders; i++) {
+            if (number % i === 0) {
+            return true;
+        }
+    }
+    return false;
+    
+ }
+
+ 
