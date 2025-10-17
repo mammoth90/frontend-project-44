@@ -51,7 +51,7 @@ export const getProgression = () => {
     }
     
     const answer = String(progression[emptySpot]);
-    progression[emptySpot] = '...';
+    progression[emptySpot] = '..';
     const question = progression.join(' ');
 
     return { question, answer }
