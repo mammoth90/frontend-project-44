@@ -13,11 +13,10 @@ const gameCatalog = {
   'brain-calc': [calcGameGreeting, maths.getExpr],
   'brain-gcd': [gcdGameGreeting, maths.getNod],
   'brain-progression': [progressionGameGreeting, maths.getProgression],
-  'brain-prime': [primeGameGreeting, maths.getPrime]
+  'brain-prime': [primeGameGreeting, maths.getPrime],
 }
 
 export const gameInit = (gameTitle) => {
-
   const gameSettings = gameCatalog[gameTitle]
   const [greeting, fn] = gameSettings
   console.log(greeting)
