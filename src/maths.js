@@ -13,7 +13,7 @@ export const isEven = () => {
 }
 
 export const getExpr = () => {
-    const question = `${getInt()}${expressions[getInt(expressions.length-1)]}${getInt()}`; // NOSONAR:  safe non-cryptographic random
+    const question = `${getInt()} ${expressions[getInt(expressions.length-1)]} ${getInt()}`; // NOSONAR:  safe non-cryptographic random
     const answer = String(eval(question)); //NOSONAR : no access for users here
     return {question, answer}
 }
