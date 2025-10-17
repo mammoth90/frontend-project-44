@@ -10,7 +10,7 @@ export const isEven = () => {
 
 export const getExpr = () => {
   const question = `${getInt()}${expressions[getInt(expressions.length - 1)]}${getInt()}` // NOSONAR:  safe non-cryptographic random
-  const answer = String(eval(question)) //NOSONAR : no access for users here
+  const answer = String(eval(question)) // NOSONAR : no access for users here
   return { question, answer }
 }
 
@@ -28,7 +28,7 @@ export const getNod = () => {
   }
   const question = `${int1} ${int2}`
   const answer = String(iter(int1, int2))
-  return {question, answer} 
+  return { question, answer }
 }
 
 export const getProgression = () => {
@@ -41,7 +41,7 @@ export const getProgression = () => {
     if (i === 0) {
       progression[i] = start
     }
-    else progression[i] = progression[i - 1] + factor;  
+    else progression[i] = progression[i - 1] + factor
   }
   const answer = String(progression[emptySpot])
   progression[emptySpot] = '..'
